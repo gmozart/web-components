@@ -17,17 +17,20 @@ class CardNews extends HTMLElement{
       cardLeft.setAttribute("class", "card__left");
 
       const autor = document.createElement("span");
-      autor.textContent = "By" + (this.getAttribute("autor") || "Anonymus");
+      autor.textContent = "By " + (this.getAttribute("autor") || "Anonymus");
 
       const linkTitle = document.createElement("a");
+      linkTitle.textContent = this.getAttribute("title");
+
       const newsContent = document.createElement("p");
+      newsContent.textContent = this.getAttribute("p")
 
       cardLeft.appendChild(autor);
       cardLeft.appendChild(linkTitle);
       cardLeft.appendChild(newsContent);
 
       const cardRight = document.createElement("div");
-      cardLeft.setAttribute("class", "card__right");
+      cardRight.setAttribute("class", "card__right");
 
       const newsImage = document.createElement("img");
       cardRight.appendChild(newsImage);
