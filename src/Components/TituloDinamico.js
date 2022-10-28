@@ -19,7 +19,7 @@ class TituloDinamico extends HTMLElement{
 
        shadow.appendChild(componentRoot);
        shadow.appendChild(style);
-      }
+    }
 }
 
 customElements.define("dinamic-title", TituloDinamico);
